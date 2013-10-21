@@ -18,3 +18,25 @@ echo $file->getExtension() . '<br>';
 echo $file->getType() . '<br>';
 $file->move('/var/www/myapp/media/');
 ```
+
+MultiUpload
+-------------------------
+
+Let's see how to use it with array_column :
+
+```html
+<form action="" method="post" enctype="multipart/form-data">
+    <input type="file" name="documents[]" multiple>
+    <input type="submit" value="Envoyer">
+</form>
+```
+
+```php
+$i = 0;
+$documents = array();
+while (!empty(array_column($_FILES['documents'], $i))) {
+    list($name, $type, $tmp_name, $error, $size) = array_column($_FILES['documents'], $i);
+    $documents[] = new UploadedFile($name, $type, $tmp_name, $error, $size);
+    $i++;
+}
+```
