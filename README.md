@@ -6,7 +6,7 @@ This class is meant to be used with files from $_FILES.
 How to use it
 -------------------------
 
-Let's see an example :
+Let's see an example:
 
 ```php
 $file = UploadedFile($name, $type, $tmp_name, $error, $size);
@@ -22,7 +22,7 @@ $file->move('/var/www/myapp/media/');
 MultiUpload
 -------------------------
 
-Let's see how to use it with array_column :
+Let's see how to use it with array_column (PHP 5.5):
 
 ```html
 <form action="" method="post" enctype="multipart/form-data">
