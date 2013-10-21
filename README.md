@@ -27,7 +27,7 @@ Let's see how to use it with array_column (PHP 5.5):
 ```html
 <form action="" method="post" enctype="multipart/form-data">
     <input type="file" name="documents[]" multiple>
-    <input type="submit" value="Envoyer">
+    <input type="submit" value="Send">
 </form>
 ```
 
