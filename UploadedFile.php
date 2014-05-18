@@ -60,10 +60,7 @@ class UploadedFile
      */
     public function hasError()
     {
-        if ($this->error === UPLOAD_ERR_OK) {
-            return false;
-        }
-        return true;
+        return $this->error === UPLOAD_ERR_OK;
     }
 
     /**
