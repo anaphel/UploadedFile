@@ -24,7 +24,6 @@ class UploadedFile
      * @param string $tmp_name
      * @param integer $error
      * @param integer $size
-     * @return void
      */
     public function __construct($name, $type, $tmp_name, $error, $size)
     {
@@ -54,7 +53,7 @@ class UploadedFile
     }
 
     /**
-     * Return if an error occured
+     * Return if an error occurred
      * 
      * @return bool
      */
@@ -94,9 +93,10 @@ class UploadedFile
 
     /**
      * Move the file to the precised location
-     * 
+     *
      * @param string $location
      * @return bool
+     * @throws Exception
      */
     public function move($location)
     {
