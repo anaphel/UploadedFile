@@ -24,6 +24,7 @@ class UploadedFile
      * @param string $tmp_name
      * @param integer $error
      * @param integer $size
+     * @return UploadedFile
      */
     public function __construct($name, $type, $tmp_name, $error, $size)
     {
